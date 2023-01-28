@@ -18,7 +18,7 @@ fun isPrimeOrFibOrEven(number: Int): String {
     val f2 = (1 - sqrt(5.0))/2
 
     val isPrime = number > 1 && (3..sqrt(number.toDouble()).toInt()).map{it}.all { number % it > 0 }
-    val isFibbonacci = (0 until number).any { ((f1.pow(it) - f2.pow(it)) / (f1-f2)).toInt() == it }
+    val isFibbonacci = (0 until number).any { ((f1.pow(it) - f2.pow(it)) / (f1-f2)).toInt() == number }
     val isEven = number % 2 == 0
 
     val prime = "$number ${if (isPrime) "es" else "no es"} primo"
